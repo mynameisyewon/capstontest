@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- SEO -->
+ <title>Stock Stimulation</title>
+ <meta name="description" content="2023년 2학기 캡스톤 주식시물레이션 게임+웹" />
+ <meta name="author" content="0cha" />
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- (OG) open graph data -->
+  <meta property="og:title" content="2023년 2학기 캡스톤 주식시물레이션 게임+웹" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="배포 후 완성된 url" />
+  <meta property="og:image" content="배포 후 완성된 이미지 url" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C400"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- font Awesome -->
+  <script 
+      src="https://kit.fontawesome.com/e5ac6b690a.js" 
+      crossorigin="anonymous"
+  ></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main1.css"/>
+  <!-- javascript -->
+  <!-- <script src="/client/main.js" ></script> -->
+  <script src="/client/index.js"></script>
+
+  
+</head>
+<body>
+
+
+
+<!--Main-->
+<main>
+  <!--Home-->
+  <section id="home" class="section">
+    <div class="home__logo">
+      <div class="home__logo__img">
+        <img style=" width: 500px" src="images/logo.png" />
+      </div>      
+      <div class="home__logo__txt">
+        <p class="home__logo__txt_1">성공한 투자자가 되기 위한 첫 걸음</p>
+        <p class="home__logo__txt_2">주식 시뮬레이션 게임으로 무한한 투자 가능성을 탐험하세요.</p>
+        <p class="home__logo__txt_3" id="randomFortune"></p>
+      </div>
+       
+       <script>
+          var txtArray = new Array();
+          txtArray[0] = "▲ 오늘의 운세  : 새로운 시작의 좋은 날입니다. 기회를 놓치지 마세요.";
+          txtArray[1] = "▲ 오늘의 운세  : 희망과 자신감으로 가득한 오늘. 당신의 가능성을 믿으세요.";
+          txtArray[2] = "▲ 오늘의 운세  : 어떤 어려움도 극복할 힘을 가지고 있습니다."
+          txtArray[3] = "▲ 오늘의 운세  : 성취와 행복의 날이 될 것입니다. 목표를 향해 나아가세요.";
+  
+          function showFortune() {
+              var txtNum = Math.floor(Math.random() * txtArray.length);
+              var randomFortuneText = txtArray[txtNum];
+              document.getElementById('randomFortune').textContent = randomFortuneText;
+          }
+          window.onload = showFortune();
+        </script>
+      
+    </div>
+
+
+
+    <div class="home__middle">
+
+          <div class="myinfo">
+                
+                <div class="touch">
+                    <span>반갑습니다.</span>
+                    <span id="homeNickname"></span>
+                    <span>님</span>
+                    <div class="touch_side">나의 정보를 확인해보세요</div> 
+                </div>
+                <div class="box">
+<div class="box_L"> 
+    <div class="box_L_header"> MY INFOMATION</div>
+    <div class="box_L_under">
+
+      <div class="box_L_under_1">
+            <div class="boxIn_imgbox">
+              <img class="boxIn_img"
+              style="width: 140px" src="./images/infoImg.png">
+           </div>
+           <div class="box_txt">
+            <div class="box_txt_name">NAME</div>
+            <div class="box_txt_nickname"> <p id="homeNickname2"></p> </div>
+            <div class="box_txt_code"> <span id="homeRanking"></span><span>위</span> </div>
+          </div>
+      </div>
+      <div>
+        <div class="box_txt_balance">
+          <table>
+            <tr>
+              <td> 보유자산  </td>
+              <td width="20px;">|</td>
+              <td><span id="homeBalance"></span><span> 원</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box_txt_account">
+          <table>
+            <tr>
+              <td> 계좌번호  </td>
+              <td width="20px;">|</td>
+              <td><span id="homeAccount"></span><span>D</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+</div>
+<div class="box_R">
+  <div class="box_R_header"> USER_CODE</div>
+    <div class="box_R_under"> 
+      <img class="box_barcode" style="width:140px" src="./images/barcod.png">
+    </div>
+</div>
+                </div>
+        
+          </div>
+
+
+          <div class="home__down">
+            <a href="#rank"> <img style="width: 70px;" src="images/scroll.png"></a>
+          </div>
+
+    </div>
+
+    <div class="home__nav">
+      <ul class="home__nav_top">
+        <a class="home__nav_top-1" href="https://www.bok.or.kr/ebook/ecatalog5.jsp?Dir=359" target="_blank">주식 용어 <br/> </a> 
+        <a class="home__nav_top-2" href="http://127.0.0.1:5500/howtoplay.html"> 게임 방법 <br/> </a>
+      </ul>
+      <ul class="home__nav_bottom">
+        <a onclick="SendMessageToUnity()" class="home__nav_bottom-1">게임시작 <br/> </a>
+        <script src="./cap10/Build/cap10.loader.js"></script>
+        <script>
+          function SendMessageToUnity(){
+            var accountNumber = localStorage.getItem('accountNumber');
+            var url = "http://localhost:55249?accountNumber=" + accountNumber;
+            window.location.href = url;}
+        </script>
+        <a class="home__nav_bottom-2" id="logoutButton">로그아웃<br/> </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              const logoutButton = document.getElementById('logoutButton');
+          
+              logoutButton.addEventListener('click', function() {
+                  // localStorage에서 토큰 제거
+                  localStorage.removeItem('accessToken');
+                  localStorage.removeItem('refreshToken');
+                  localStorage.removeItem('accountNumber')
+          
+                  // 로그아웃 후 메인 페이지로 리다이렉트
+                  window.location.href = "http://127.0.0.1:5500/main.html";
+              });
+          });
+          </script>
+          
+      </ul>
+      <div id="intro"></div>
+    </div>
+    
+
+  </section>
+
+  <!--Rank-->
+  <section id="rank" class="section">
+    <div class="rank_empty"></div>
+    <!-- top 3-->
+    <div class="rank">
+      <div class="rank__title">
+      <p class="rank__title__head">Top 3</p>
+      <p class="rank__title__assistance">오늘의 주식 투자왕</p>
+      </div>
+      <div class="rank__show">   <!--API-->
+        <div class="rank__show_in">
+          <div class="rank__show__top1">
+            <p id="account1"> </p>   
+            <img class="rank__show__img-Character" style="width: 50%" src="images/rank-1.png">
+            <div id="nickname1" class="rank__show__top1_box"></div>
+          </div>
+          <div class="rank__show__top2">
+            <p id="account2"> </p>   
+            <img class="rank__show__img-Character" style="width: 50%" src="images/rank-2.png">
+            <div id="nickname2" class="rank__show__top2_box"></div>
+          </div>
+          <div class="rank__show__top3">
+            <p id="account3"></p>  
+            <img class="rank__show__img-Character" style="width: 50%" src="images/rank-3.png">
+            <div id="nickname3" class="rank__show__top3_box"></div>
+          </div>
+        </div>
+        <div class="bottom_box"  style="position:relative; z-index: 1;">
+        </div>
+      </div>
+    </div>
+    <!-- 실시간 순위-->
+    <div class="chart">
+      <p class="chart__title">실시간 순위</p>
+      
+      <div class="chart__live">    
+        <div class="v">
+          <table>
+            <colgroup>
+              <col width="100px">
+              <col width="120px">
+              <col width="200px">
+            </colgroup>
+            <thead>
+              <tr>
+                <td>순위</td>
+                <td>닉네임</td>
+                <td>잔고</td>
+              </tr>
+            </thead>
+          </table>
+          <hr style="border:solid 0.5px #291E1E;">
+          <div class="chart__in">
+            <table id="rankDB">
+              <colgroup>
+                <col width="100px">
+                <col width="120px">
+                <col width="200px">
+              </colgroup>
+              <tbody>
+             
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+    </div>
+  </section>
+</main>
+<!--Footer-->
+<footer class="footer">
+  <ul class="footer__title">
+    <li><div class="footer__title__box">회사소개</div></li>
+    <li><div class="footer__title__box">이용약관</div></li>
+    <li><div class="footer__title__box">개인정보처리방침</div></li>
+  </ul>
+  <div class="footer__line"></div>
+  <div class="footer__info">
+    <div>(주) 영차</div>
+    <div><a href="https://url.kr/6u54g1">(24252) 강원특별자치도 춘천시 한림대학길 1</a></div>
+    <div><span >팩스 : 1234-5678</span>
+      <span class="footer__info__tel"><a href="tel:+82.1234.5678">전화 : 1234-5678</a></span></div>
+    <a href="mailto:1234@gmail.com">E-mail: 1234@gmail.com</a>
+  </div>
+</footer>
+</body>
+</html>

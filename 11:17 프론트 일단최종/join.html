@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- SEO -->
+ <title>join</title>
+ <meta name="description" content="2023년 2학기 캡스톤 주식시물레이션 게임+웹" />
+ <meta name="author" content="0cha" />
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- (OG) open graph data -->
+  <meta property="og:title" content="2023년 2학기 캡스톤 주식시물레이션 게임+웹" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="배포 후 완성된 url" />
+  <meta property="og:image" content="배포 후 완성된 이미지 url" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C400"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- font Awesome -->
+  <script 
+      src="https://kit.fontawesome.com/e5ac6b690a.js" 
+      crossorigin="anonymous"
+  ></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/join.css"/>
+  <script src="/client/signup.js"></script>
+  <!-- <script src="/client/api.js"></script> -->
+</head>
+
+<body>
+<main>
+<section style="background-color: #101D29;" id="#home" class="section">
+<div class="logo">
+  <div onclick="location.href='http://127.0.0.1:5500/main.html'" class="logo__img">
+    <img style=" width: 500px"  src="images/logo.png"/>
+  </div>  
+
+  <div class="signup">
+    <div onclick="location.href='http://127.0.0.1:5500/main.html'" class="signup__X">
+    <a> <i class="fa-sharp fa-regular fa-x fa-xl" style="color: #ffffff;"></i> </a>
+    </div>
+  
+
+    <div class="signup__box">
+  
+      <div class="signup-wrapper">
+        <h1>회원가입</h1>
+        <p class="intro">주식 시물레이션 게임에 오신 것을 환영합니다!</p>
+        <hr style="border: solid 0.3px #2b2e37;">
+        <div class="box"></div>
+        <form id="signup-form">
+          <input type=nick"name" name="nickname" id="nickname" placeholder="닉네임을 입력해주세요" required>
+          <input type="id" name="id" id="id" placeholder="아이디를 입력해주세요" required>
+          <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" required>
+          <div class="nun1"></div>
+          <hr style="border: solid 0.3px #2b2e37;">
+          <div class="nun2"></div>
+          <button class="button_join" type="submit">가입하기</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+</section>
+</main>
+</body>
+
+</html>

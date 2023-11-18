@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- SEO -->
+ <title>login</title>
+ <meta name="description" content="2023년 2학기 캡스톤 주식시물레이션 게임+웹" />
+ <meta name="author" content="0cha" />
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- (OG) open graph data -->
+  <meta property="og:title" content="2023년 2학기 캡스톤 주식시물레이션 게임+웹" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="배포 후 완성된 url" />
+  <meta property="og:image" content="배포 후 완성된 이미지 url" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C400"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- font Awesome -->
+  <script 
+      src="https://kit.fontawesome.com/e5ac6b690a.js" 
+      crossorigin="anonymous"
+  ></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/login.css"/>
+  <script src="/client/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+<main>
+<section style="background-color: #101D29;" id="#home" class="section">
+<div class="logo">
+  <div class="logo__img" onclick="location.href='http://127.0.0.1:5500/main.html'">
+    <img style=" width: 500px" src="images/logo.png" />
+  </div>  
+
+  <div class="login">
+    <div onclick="location.href='http://127.0.0.1:5500/main.html'" class="login__X">
+    <a> <i class="fa-sharp fa-regular fa-x fa-xl" style="color: #ffffff;"></i> </a>
+    </div>
+  
+
+    <div class="login__box">
+  
+      <div class="login-wrapper">
+        <h1>로그인</h1>
+
+
+        <div>
+          <!-- method="POST" -->
+        <form id="login-form"> 
+          <input type="text" id="id" name="id" placeholder="id" >
+          <input type="password" name="password" id="password" placeholder="Password"> 
+          <button class="login_button" type="submit">Login</button>
+
+        </form>
+            <div id="message"></div>
+      </div>
+
+      <div class="login_easy">
+        <div class="hr-sect">간편 로그인</div>
+        
+        <div>
+          <ul>
+            <li class="login-sns-kakao">
+            <form id="login-form-kakao">
+              <a href="http://localhost:8082/oauth2/authorization/kakao"> <img style="width: 40px" src="images/logo-kakao.png"> 
+                <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>                
+              </a>
+              </form>
+            </li>
+
+            <li class="login-sns-naver">
+              <form id="login-form-naver">
+              <a href="http://localhost:8082/oauth2/authorization/naver"> <img style="width: 40px" src="images/logo-naver.png"> </a>
+              </form>
+            </li>
+          </ul>
+          <div id="message" style="color: red;"></div> <!-- 오류 메시지를 표시할 요소 -->
+          <a class="button_join" href="http://127.0.0.1:5500/join.html"> 회원가입 </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</main>
+</body>
+
+</html>

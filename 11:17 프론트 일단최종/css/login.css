@@ -1,0 +1,232 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+
+  /* Colors */
+  --color-white:#F6F4F1;
+  --color-red: #EE7272;
+  --color-yellow: #ECE892;
+  --color-blue: #7CABF2;
+  --color-black: #291E1E;
+  --color-back: #101D29;
+
+  /* Size */
+  --size-max-width: 120px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+} 
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-size: 14px;
+}
+p,
+ul {
+margin: 0;
+}
+ul {
+list-style: none;
+padding: 0;
+
+}
+li {
+  display: inline-block; 
+}
+a {
+text-decoration-line: none;
+color: var(--color-white);
+}
+button {
+background-color: transparent;
+outline: 1;
+border: 0;
+}
+
+button:focus {
+outline: 1px solid transparent;
+}
+
+#home{
+  padding: 5rem 1rem;
+}
+.logo{
+  padding: 6rem 5rem;
+  display: flex;
+  height: 100vh;
+}
+.logo__img{
+  object-fit: cover;
+  width: 55%;
+  padding-left: 2%;
+}
+.login__X{
+  text-align: right;
+  line-height: 2rem;
+  padding: 5px;
+}
+.login__box{
+  background-color: #F6F4F1;
+  width: 24rem;
+  height: 34rem;
+  border-radius: 8px;
+  text-align:center;
+  vertical-align: middle;
+}
+
+.login-wrapper{
+  width: 385px;
+  height: 350px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.login-wrapper > h1{
+  font-size: 20px;
+  color: #2b2e37;
+  margin-bottom: 20px;
+}
+.login_button{
+  width: 305px;
+  height:50px;
+  padding: 1rem 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  background-color: #484F68;;
+  color: #F6F4F1;
+  font-size: 17px;
+}
+
+.login_button:hover {
+  box-shadow: rgba(104, 102, 102, 0.25) 0px 25px 50px -12px;
+}
+
+#login-form > input{
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background-color: #D9D9D9;
+}
+#login-form > input::placeholder{
+  color: #2b2e37;
+}
+
+#login-form > input[type="checkbox"]{
+  display: none;
+}
+#login-form > label{
+  color: #2b2e37;
+}
+#login-form input[type="checkbox"] + label{
+  cursor: pointer;
+  padding-left: 26px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#login-form input[type="checkbox"]:checked + label{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 이전코드 --
+
+.login_ID{
+  width: 300px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #dedede;
+}
+.login_PW{
+  margin-top: 10px;
+  width: 300px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #dedede;
+}
+
+.login_bottom{
+  width: 300px;
+  height: 50px;
+  padding: 10%;
+  text-align:center;
+  display: inline-block;
+  margin-bottom: 15%;
+  border-radius: 5px;
+  background-color: var(--color-back);
+  font-weight: bold;
+}
+
+.button_login{
+  width: 300px;
+  height: 55px;
+  display: inline-block;
+  padding: 1rem 0rem;
+  margin: 3rem 0rem 1rem;
+  border-radius: 20px;
+  background-color: #484F68;
+  font-weight: bold;
+}
+.button_login:hover {
+  box-shadow: rgba(104, 102, 102, 0.25) 0px 25px 50px -12px;
+}
+-------------------- */
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: var(--color-back);
+  font-size: 16px;
+}
+.hr-sect::before,
+.hr-sect::after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 40px;
+}
+
+.login-sns-naver{
+  padding-top: 20px;
+  padding-bottom: 18px;
+  padding-left: 10px;
+}
+
+.button_join{
+  font-size: 16px;
+  width: 303px;
+  height: 48px;
+  display: inline-block;
+  padding: 0.8rem 0rem;
+  border-radius: 6px;
+  background-color: #728768;
+}
+.button_join:hover {
+  box-shadow: rgba(104, 102, 102, 0.25) 0px 25px 50px -12px;
+}
+
+
+.login_easy{
+  height:150px;
+}
+.login_easy-txt{
+  color: black;
+  vertical-align: middle;
+  border-top: 1px solid #444444;
+  margin: 30px auto;
+  width: 300px;      
+}
